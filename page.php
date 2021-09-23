@@ -10,6 +10,20 @@
   </section>
 
   <div class="c-section__container--mb">
+
+    <?php
+    if (have_posts()) :
+      while (have_posts()) : the_post(); ?>
+        <!--  ループ開始  -->
+        <div class="ttl"><?php the_content(); ?></div>
+
+    <?php endwhile;
+    endif; ?>
+    <!--  /ループ終わり -->
+
+  </div>
+
+  <div class="c-section__container--mb">
     <article class="p-article">
       <h2 class="p-article__title p-product__aticle__title">当店の人気シリーズ</h2>
       <p class="p-article__text">
@@ -71,8 +85,6 @@
         </li>
       </ul>
     </section>
-
-    <?php get_template_part('loop', 'page'); ?>
 
     <section class="p-product">
       <div class="p-product-image__wrapper">
@@ -167,10 +179,6 @@
 </div>
 <!--l-main__container-->
 </div> <!-- l-container__left  -->
-
-</div>
-</div>
-<!--l-main__container-->
 
 <?php get_sidebar(); ?>
 

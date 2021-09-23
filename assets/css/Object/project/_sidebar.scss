@@ -48,7 +48,7 @@
     }
   }
   &__menu {
-    padding: 21.2rem 1.5rem 0 4.6rem;
+    padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
     color: #707070;
   }
   &__submenu-items {
@@ -70,7 +70,7 @@
     }
   }
   #menu-global-navigation-custom {
-      padding: 21.2rem 1.5rem 0 4.6rem;
+    padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
     color: #707070;
   }
 }

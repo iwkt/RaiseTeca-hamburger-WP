@@ -28,7 +28,13 @@
 }
 
  @include mq () {
-   .wp-block-image {
-     margin-bottom: 6rem;
-   }
- }
+    .wp-block-image {
+      margin-bottom: 6rem;
+    & > .size-medium {
+      & > img {
+        height: calc(358 / 1920 * 100vw);
+        object-fit: contain;
+      }
+    }
+  }
+}

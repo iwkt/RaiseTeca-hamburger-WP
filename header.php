@@ -31,7 +31,7 @@
           <div class="l-main__container">
 
             <header class="l-header">
-              <button id="js-menu_open" class="p-header__menu-btn  p-menu">Menu</button></p>
+              <button id="js-menu_open" class="p-header__menu-btn  p-menu">Menu</button>
               <div class="p-header__wrapper">
                 <div class="p-header__outer">
                   <h1 class="p-header__title"><a href="<?php echo home_url(); ?> ">Hamburger</a></h1>

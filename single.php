@@ -3,19 +3,25 @@
 
   <section class="p-mainvisual">
     <div class="p-mainvisual__wrapper">
-      <div class="p-mainvisual__layer--history">
-        <h2 class="p-mainvisual__title--font-lg c-title-text">h1 チーズバーガー</h2>
+      <div class="p-mainvisual__layer--wide" style="
+          background: url(<?php the_field('mainvisual'); ?>);
+          background-position: 50% 50%;
+          background-size: cover;
+        ">
+        <h2 class="p-mainvisual__title--font-lg c-title-text"><?php echo get_the_title(); ?></h2>
       </div>
     </div>
   </section>
 
+  <p class="damy">single.php</p>
   <div class="c-section__container--mb">
     <article class="p-article">
-      <h2 class="p-article__title p-product__aticle__title">当店の人気シリーズ</h2>
+      <h2 class="p-article__title p-product__aticle__title"><?php the_field('サブタイトル'); ?></h2>
       <p class="p-article__text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium dolores minima distinctio expedita aut quos quaerat labore ea, asperiores et, alias mollitia? Ad, quibusdam porro neque tenetur culpa dignissimos? Deserunt.これはsingle.php
+        <?php the_field('キャッチコピー'); ?>これはカスタムフィールドplug-in
+        <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium dolores minima distinctio expedita aut quos quaerat labore ea, asperiores et, alias mollitia? Ad, quibusdam porro neque tenetur culpa dignissimos? Deserunt.-->
       </p>
-      <ul class="p-article__items">
+      <!-- <ul class="p-article__items">
         <li class="p-article__item">
           <h3>見出しh3</h3>
         </li>
@@ -28,11 +34,11 @@
         <li class="p-article__item">
           <h6>見出しh6</h6>
         </li>
-      </ul>
+      </ul> -->
     </article>
 
-    <section class="p-product__quote c-section__container--mb">
-      <p class="p-product__quote__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, deserunt iste earum neque quaerat quae magni, vel nobis aspernatur maxime cum nesciunt ut praesentium amet ipsum doloribus quas? Modi, ducimus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, deserunt iste earum neque quaerat quae magni, vel nobis aspernatur maxime cum nesciunt ut praesentium amet ipsum doloribus quas? Modi, ducimus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, deserunt iste earum neque quaerat quae magni, vel nobis aspernatur maxime cum nesciunt ut praesentium amet ipsum doloribus quas? Modi, ducimus?Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    <section class="p-product__quote p-quote c-section__container--mb">
+      <p class="p-product__quote__text"><?php the_field('引用'); ?></p>
       <div class="p-quote__sorce-wrapper">
         <span class="p-quote__sorce" 　>出典元：</span><a class="p-quote__sorce__link" href="#">○○○○○○○○○○○○</a>
       </div>
@@ -48,26 +54,11 @@
         <li class="p-product__media__item">
           <div class="p-media">
             <figure class="p-media__img-wrapper">
-              <!-- <img calss="p-media__img" src="./assets/images/buger_potato@2x.jpg" alt=""> -->
-              <?php
-              if (post_images()) :
-                $images = post_images();
-                // foreach ($images as $img) :
-              ?>
-                <img src="<?php echo $images[0]; ?>" alt="<?php the_title(); ?>">
-
-              <?
-              endif; ?>
+              <img class="p-media__img" src="<?php the_field('記事1用画像'); ?>" alt="">
             </figure>
             <div class="p-media__body">
               <p class="p-media__text p-product__description">
-              <?php 
-                $post_data = get_post();
-                $content = $post_data->post_content;
-                var_dump($post_data);
-              ?>  
-              
-                <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque culpa amet quae sit eaque fuga quos nulla veniam incidunt!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium dolores minima distinctio expedita aut quos quaerat labore ea, asperiores et, alias mollitia? Ad, quibusdam porro neque tenetur culpa dignissimos? Deserunt.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium dolores minima distinctio expedita aut quos quaerat labore ea, asperiores et, alias mollitia? Ad, quibusdam porro neque tenetur culpa dignissimos? Deserunt. -->
+                <?php the_field('記事1'); ?>
               </p>
             </div>
           </div>
@@ -75,20 +66,11 @@
         <li class="p-product__media__item">
           <div class="p-media--right">
             <figure class="p-media__img-wrapper">
-              <?php
-              if (post_images()) :
-                $images = post_images();
-                // foreach ($images as $img) :
-              ?>
-                <img src="<?php echo $images[1]; ?>" alt="<?php the_title(); ?>">
-
-              <?
-              endif; ?>
-              <!-- <img calss="p-media__img" src="./assets/images/buger_potato@2x.jpg" alt=""> -->
+              <img class="p-media__img" src="<?php the_field('記事2用画像'); ?>" alt="">
             </figure>
             <div class="p-media__body">
               <p class="p-media__text p-product__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque culpa amet quae sit eaque fuga quos nulla veniam incidunt!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium dolores minima distinctio expedita aut quos quaerat labore ea, asperiores et, alias mollitia? Ad, quibusdam porro neque tenetur culpa dignissimos? Deserunt.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium dolores minima distinctio expedita aut quos quaerat labore ea, asperiores et, alias mollitia? Ad, quibusdam porro neque tenetur culpa dignissimos? Deserunt.
+                <?php the_field('記事2'); ?>
               </p>
             </div>
           </div>
@@ -122,7 +104,7 @@
     <section class="p-product">
       <div class="p-product-image__wrapper">
         <img src="./assets/images/buger_potato@2x.jpg" alt="" class="p-product-image__normal-wide">
-        <ul class="p-product-image__items">
+        <!-- <ul class="p-product-image__items">
           <li class="p-product-image__item"><a href="#"><img src="./assets/images/buger_potato@2x.jpg" alt=""></a></li>
           <li class="p-product-image__item"><a href="#"><img src="./assets/images/buger_potato@2x.jpg" alt=""></a></li>
           <li class="p-product-image__item"><a href="#"><img src="./assets/images/buger_potato@2x.jpg" alt=""></a></li>
@@ -132,7 +114,7 @@
           <li class="p-product-image__item"><a href="#"><img src="./assets/images/buger_potato@2x.jpg" alt=""></a></li>
           <li class="p-product-image__item"><a href="#"><img src="./assets/images/buger_potato@2x.jpg" alt=""></a></li>
           <li class="p-product-image__item"><a href="#"><img src="./assets/images/buger_potato@2x.jpg" alt=""></a></li>
-        </ul>
+        </ul> -->
       </div>
       <div class="p-product-text__wrapper">
         <ol class="p-product-text__items">
@@ -201,7 +183,7 @@
       </table>
     </section>
     <button class="c-gradietion-btn--long p-product__btn-long">ボタン</button>
-    <section class="p-producr__text-bold">
+    <section class="p-product__text-bold">
       <p>boldboldboldboldboldboldbold</p>
     </section>
 

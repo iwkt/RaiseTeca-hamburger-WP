@@ -81,6 +81,16 @@ ol[class] {
   padding: 0;
 }
 
+.post P,
+.single P,
+.page P {
+  margin: 1em 0;
+}
+
+p[class] {
+  margin: 0;
+}
+
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;

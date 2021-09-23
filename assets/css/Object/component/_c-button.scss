@@ -138,8 +138,7 @@
 //     font-family: "M+ 1m";
 //   }
 // }
-
- .wp-block-button__link{
+div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
     width: 100%;
     padding: 2.8rem 0;
     font-weight: bold;
@@ -150,6 +149,9 @@
     color: #707070;
     cursor: pointer;
     font-family: "M+ 1m";
+    @include mq() {
+      width: calc(75% - 14px);
+    }
   }
 
 

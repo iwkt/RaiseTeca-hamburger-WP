@@ -4,7 +4,6 @@
 
   }
   &__layer {
-    // position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -13,7 +12,7 @@
     // background-position: 100% 100%;
     // background-size: cover;
     height: calc(285 / 375 * (100vw - 13px));
-
+    margin-bottom: 3rem;
     @include mq(sm) {
       // background: url(../images/hamburger@2x.jpg);
       // background-position: 100% 100%;
@@ -25,6 +24,7 @@
       height: calc(512 / 1920 * 100vw);
       max-height: 512px;
       padding: 0 0 0 6.5rem;
+      margin-bottom: 6rem;
     }
 
     &--index {
@@ -72,7 +72,7 @@
         background-color: rgba($color: #000000, $alpha: 0.5);
       }
     }
-    &--history {
+    &--wide {
       @extend .p-mainvisual__layer;
       height: calc(225 / 375 * (100vw - 13px));
       // background: url(../images/mv_history@2x.jpg);
