@@ -1,0 +1,11 @@
+.p-menu {
+  font-size: 2rem;
+  font-family: Roboto;
+  font-weight: 700;
+  color: #707070;
+  text-align: right;
+
+  @include mq() {
+    font-size: 3.4rem;
+  }
+}

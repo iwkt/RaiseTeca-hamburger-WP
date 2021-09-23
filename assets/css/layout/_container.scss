@@ -1,0 +1,91 @@
+.l-global-container {
+  min-width: 355px;
+  max-width: 1920px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+  &.js-is_open{
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($color: #000000, $alpha: .6);
+    }
+  }
+}
+.l-container {
+  display: block;
+  width: 100%;
+  @include mq(md) {
+    display: flex;  
+  }
+}
+
+.l-container__left {
+  @include mq(md) {
+    // flex: 81;
+    width: calc(1553 / 1920 * 100vw);
+    max-width: 1553px;
+    // flex: 19;
+    display: flex;
+    // position: static;
+    // height: auto;
+  }
+}
+
+
+.l-container__right {
+  @include mq() {
+    left: 100%;
+    &.js-is_open {
+      $width: calc(100% - 367 / 834 * 100%);
+      left: $width;//variableに記載
+    }
+  }
+  @include mq(md) {
+    flex: 19;
+    display: flex;
+  }
+}
+
+.c-section__container {
+  margin: 0 auto;
+  padding: 20px 20px;
+  max-width: 1553px;
+  // margin-bottom: 3rem;
+  &--mb {
+    width: calc(100vw - 14px);
+    // margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 3rem;
+    
+    @include mq() {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      margin-bottom: 6rem;
+    }
+    @include mq(lg) {
+      max-width: 1353px;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      margin: 0 auto 6rem;
+    }
+  }
+  
+  @include mq(){
+    padding-left: 40px;
+    padding-right: 40px;
+    // margin-bottom: 6rem;
+  }
+}
+
+.l-main__container {
+  @include mq(lg) {
+    width: 100%;
+  }
+}

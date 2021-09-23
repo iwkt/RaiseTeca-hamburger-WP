@@ -1,0 +1,14 @@
+.blocks-gallery-grid .blocks-gallery-item, .wp-block-gallery .blocks-gallery-image, .wp-block-gallery .blocks-gallery-item {
+    margin: 0 0em 3rem 0; //１カラムなのでぼとむだけでOK
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-self: flex-start;
+    /* width: calc(50% - 1em); //１カラムなので不要 */
+    width: 100%;//１カラムなので100%でOK
+}
+
+@include mq() {
+}

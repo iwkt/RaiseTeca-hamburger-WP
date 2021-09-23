@@ -1,0 +1,70 @@
+.p-access__description {
+  color: #fff;
+  line-height: 2rem;
+  font-size: 1.4rem;
+  line-height: calc(33 / 14);
+  font-family: "M+ 1p";
+  font-weight: 500;
+}
+
+///////////////////////////
+
+.p-access {
+  &__cover {
+    @include mq() {
+      position: relative;
+      &::after {
+        // content: "";
+        background-color: rgba($color: #000000, $alpha: 0.6);
+      }
+      &::before {
+        content: none;
+      }
+    }
+  }
+  &__description {
+    @include mq() {
+      font-size: 1.6rem;
+    }
+  }
+  &__map {
+    background-image: url(../images/map_mobile@2x.png);
+    background-size: contain;
+    width: 100%;
+    @include mq() {
+      background-image: url(../images/map@2x.jpg);
+    }
+  }
+  &-text__inner {
+    min-height: 690px;
+    padding: 4rem;
+    background: linear-gradient(
+      180deg, 
+      rgba($color: #000000, $alpha: 0.6) 0%, 
+      rgba($color: #000000, $alpha: 0.6) 60%, 
+      rgba($color: #000000, $alpha: 0.3) 60%, 
+      rgba($color: #000000, $alpha: 0.3) 100%);
+    // background-color: rgba($color: #000000, $alpha: 0.6);
+    @include mq() {
+      min-height: 41.2rem;
+      background-image: none;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+    }
+    @include mq(lg) {
+      width: 100%;
+      // padding: 12rem;
+      background: linear-gradient(
+        90deg, 
+        rgba($color: #000000, $alpha: 0.6) 0%, 
+        rgba($color: #000000, $alpha: 0.6) 60%, 
+        rgba($color: #000000, $alpha: 0.3) 60%, 
+        rgba($color: #000000, $alpha: 0.3) 100%);      
+    }
+  }
+  &-text__wrapper {
+    @include mq(lg) {
+      width: 60%;
+      padding: 12rem;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+// @import "mixin/mixin";
+// @import "variable/variable";
+
+.p-product {
+	font-size: 1.6rem;
+	color: #3C2A10;
+	&__aticle__title {
+		margin: 3rem 0;
+	}
+	&-code {
+		font-size: 1.6rem;
+		margin: 3rem 0;
+	}
+	&__description {
+		height: 186px;
+		overflow: hidden;
+	}
+	&__img--full {
+		width: 100%;
+		object-fit: cover;
+		height: calc(500 / 1920 * 100vw);
+		max-height: 500px;
+	}
+	&__media__item {
+		margin-bottom: 3rem;
+	}
+}
+
+.p-product-code__items {
+	background-color: #F5F5F5;
+	padding: 5rem;
+}
+
+.p-product-code__item {
+	& + .p-product-code__item {
+	padding-left: 2rem;
+	}
+	&:last-child {
+		padding-left: 0 ;
+	}
+}
+
+
+.p-product-image{
+	&__normal-wide {
+		padding: 0rem 3.4rem 3rem;
+		width: 100%;
+		min-width: 100%;
+	}
+}
+
+.p-product-image__item {
+	&:not(:last-child) {
+    padding-bottom: 2rem;
+	}
+}
+
+.p-product-text {
+	&__items--child {
+		padding: 2rem 0;
+	}
+	&__item {
+		list-style-type: decimal;
+		margin-left: 2rem;
+	}
+	&__wrapper {
+		padding: 3rem 0;
+	}
+	&__wrapper--decoration-none {
+		& .p-product-text__item {
+			list-style: none;
+		}
+	}
+}
+
+.p-product__table {
+	border: 1px solid #707070;
+	border-collapse: collapse;
+	font-size: 1.6rem;
+	color: #3C2A10;
+	width: 100%;
+	& tr {
+		border: 1px solid #707070;
+	}
+	
+	& td {
+		padding: 2.8rem 0 2.8rem 3rem;
+		&:nth-child(2n) {
+			width: 60%;
+		}
+	}
+}
+
+.p-product__btn-long {
+	margin: 3rem 0;
+}
+
+.p-product__text-bold {
+	font-weight: bold;
+	font-size: 1.6rem;
+	color: #3C2A10;
+	padding-bottom: 117px;
+}
+
+@include mq() {
+	.p-product {
+		&__aticle__title {
+			margin: 6rem 0;
+		}
+		&__btn-long {
+			margin: 6rem 0;
+			width: 43rem;
+		}
+		&__description {
+		overflow: visible;
+		height: auto;
+		}
+		&-image__items {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		&-image__item {
+			flex: 0 1 49%;
+		}
+		&-image__normal-wide {
+			padding: 0rem 8.6rem 24.1rem;
+			width: 100%;
+			min-width: 100%;
+		}
+	}
+}
+
+@include mq(lg) {
+	.p-product {
+		&__media__items {
+			margin-bottom: 6rem;
+		}
+		&-image__item {
+			flex: 0 1 32%;
+		}
+		&-image__normal-wide {
+			padding: 0rem calc(406 / 1920 * 100vw) 6rem;
+			margin: 0 auto;
+			width: calc(556 / 1920 * 100vw);
+			min-width: 100%;
+		}
+	}
+}

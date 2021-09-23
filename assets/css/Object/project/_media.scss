@@ -1,0 +1,34 @@
+.p-media {
+	display: flex;
+	&--right {
+		@extend .p-media;
+		flex-direction: row-reverse;
+		& .p-media__img-wrapper {
+			margin-right: 0;
+			margin-left: calc(10 /375 * 100vw);
+		}
+	}
+}
+
+.p-media__img-wrapper {
+	flex: 0 1 calc(144 / (337 ) * 100%);
+	margin-right: calc(10 /375 * 100vw);
+	// object-fit: cover;
+}
+.p-media__body {
+	 flex: 1;
+	 padding-bottom: 1rem;
+	 &:last-child {
+		 margin-bottom: 0;
+	 }
+ }
+
+.p-media__text {
+	font-size: 1.6rem;
+	line-height: calc(23 / 16);
+}
+
+.p-media__img {
+	object-fit: cover;
+	height: 100%;
+}

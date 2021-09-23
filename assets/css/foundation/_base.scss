@@ -1,0 +1,44 @@
+@import "mixin/mixin";
+@import "variable/variable";
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "M+ 1p",Roboto, sans-serif,source-han-sans-japanese, -apple-system, system-ui, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", メイリオ, Meiryo;
+  font-size: 1.6rem;
+}
+
+  .body.js-is_open {
+    overflow: hidden;
+  }
+
+  .single h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+  h4,h5,h6 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  @include mq () {
+    .single h2 {
+      margin-bottom: 6rem;
+    }
+    h3 {
+      margin-bottom: 6rem;
+    }
+    h4,h5,h6 {
+      margin-bottom: 6rem;
+    }
+  }

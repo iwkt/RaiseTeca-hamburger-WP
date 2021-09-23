@@ -1,0 +1,83 @@
+.p-card {
+  &__body {
+    background-color: #3C2B1C;
+    padding: 3.15rem 1.7rem;
+  }
+  &__img {
+    object-fit: cover;
+    height: 100%;
+  }
+  &__title {
+    color: #fff;
+    margin-bottom: 2.4rem;
+    font-size: 2rem;
+  }
+  &__sub-title {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  &__text {
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.44em;
+    margin-bottom: 4rem;
+  }
+  &__btn-area {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/////////////////////////////////////////////////
+@include mq() {
+  .p-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: calc(354 / 853 * 100vw);
+    min-height: 354px;
+    max-height: 471px;
+    &__body {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-evenly;
+      height: 100%;
+      width: 100%;
+      padding-left: calc(32.7 / 853 * 100vw);
+      padding-right: calc(32.7 / 853 * 100vw);
+    }
+    &__img {
+      object-fit: cover;
+      object-position: 41% 100%;
+      height: 100%;
+    }
+    &__img-wrapper {
+      flex: 0 0 calc(378 / 756 * 100%);
+      height: 100%;
+    }
+  }
+}
+
+@include mq(lg) {
+  .p-card {
+    &__title {
+      font-size: 3.6rem;
+    }
+    &__sub-title {
+      margin-bottom: 1rem;
+      font-size: 2.4rem;
+    }
+  }
+}
+@include mq(xl) {
+  .p-card {
+    &__body {
+      padding-left: 6.3rem;
+      padding-right: 6.3rem;
+    }
+  }
+}

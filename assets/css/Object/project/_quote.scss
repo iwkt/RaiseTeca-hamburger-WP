@@ -1,0 +1,15 @@
+	.p-quote {
+		background-color: #F5F5F5;
+		padding: 3rem 2rem;
+		font-size: 1.6rem;
+		&__text {
+			margin-bottom: 3rem;
+		}
+  }
+	
+  .wp-block-quote {
+		@extend .p-quote;
+		margin-bottom: 6rem;
+  }
+
+	

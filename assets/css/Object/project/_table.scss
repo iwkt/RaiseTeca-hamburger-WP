@@ -1,0 +1,24 @@
+figure[class].wp-block-table {
+	// border: 1px solid #707070;
+	// border-collapse: collapse;
+	// font-size: 1.6rem;
+	// color: #3C2A10;
+	width: 100%;
+	// & tr {
+	// 	border: 1px solid #707070;
+	// }
+	
+	// & td {
+	// 	padding: 2.8rem 0 2.8rem 3rem;
+		// &:nth-child(2n) {
+		// 	width: 60%;
+		// }
+	// }
+}
+tr,td {
+  border: 1px solid #707070;
+}
+
+td {
+	padding: 2.8rem 0 2.8rem 1rem;
+}

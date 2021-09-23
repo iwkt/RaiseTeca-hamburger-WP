@@ -1,0 +1,20 @@
+.p-result {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+      @include mq(lg) {
+        margin-bottom: 3rem;
+      }
+    }
+    &:last-child {
+      margin-bottom: 7rem;
+    }
+    &:hover .p-card__img {
+      transition: 0.3s;
+      transform: scale(1.2);
+    }
+    & .p-card__img-wrapper {
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.c-code {
+	display: block;
+  padding: 4rem 0; /* 文字周りの余白 */
+  color: #3C2A10; /* 文字色 */
+	background-color: #F5F5F5;
+	&__pre {
+		white-space: pre-wrap;
+		word-wrap: break-word;
+	}
+}
+
+.wp-block-code { //WPオリジナルクラス
+	@extend .c-code;
+	font-size: 1.6rem;
+	padding: 4rem 3rem; /* 文字周りの余白 */
+	
+}

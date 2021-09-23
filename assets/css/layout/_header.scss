@@ -1,0 +1,9 @@
+.l-header {
+  height: 217px;
+  background-color: #FFF7EF;
+  padding: 4rem 2.4rem;
+
+  @include mq(md) {
+    padding: 6.5rem 3rem 6.5rem 6.5rem;
+  }
+}  

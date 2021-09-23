@@ -1,0 +1,20 @@
+.p-footer {
+  &__layer {
+    background-image: url(../images/bgi_footer@2x.png);
+    width: 100%;
+  }
+  &__info-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 4.1rem 0 3.6rem 0;
+    color: #fff;
+  }
+  &__info {
+    font-size: 2rem;
+    margin-bottom: 34px;
+  }
+  &__copyright {
+    font-size: 14px;
+  }
+}
