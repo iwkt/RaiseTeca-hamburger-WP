@@ -34,7 +34,7 @@
               <button id="js-menu_open" class="p-header__menu-btn  p-menu">Menu</button>
               <div class="p-header__wrapper">
                 <div class="p-header__outer">
-                  <h1 class="p-header__title"><a href="<?php echo home_url(); ?> ">Hamburger</a></h1>
+                  <h1 class="p-header__title"><a href="<?php echo esc_url(home_url()); ?> ">Hamburger</a></h1>
                   <div class="p-header__form">
                     <?php get_search_form(); ?>
                   </div>

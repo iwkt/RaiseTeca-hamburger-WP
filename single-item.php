@@ -9,7 +9,11 @@
           background-size: cover;
         ">
         <h2 class="p-mainvisual__title--font-lg c-title-text"><?php echo get_the_title(); ?></h2>
-      </div>
+      <!-- <div class="p-mainvisual__layer--wide" 
+      >
+      <?php echo the_post_thumbnail(); ?>  
+        <h2 class="p-mainvisual__title--font-lg c-title-text"><?php echo get_the_title(); ?></h2>
+      </div> -->
     </div>
   </section>
 

@@ -418,7 +418,7 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
 
 @media screen and (min-width: 600px) {
   div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
-    width: calc(75% - 14px);
+    width: calc(50% - 14px);
   }
 }
 

@@ -150,7 +150,7 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
     cursor: pointer;
     font-family: "M+ 1m";
     @include mq() {
-      width: calc(75% - 14px);
+      width: calc(50% - 14px);
     }
   }
 
