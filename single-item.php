@@ -23,7 +23,7 @@
 
     <?php endwhile;
     endif; ?>
-    <!--  /ループ終わり -->
+    <!--  ループ終わり -->
 
   </div>
   <!--c-section__container-->

@@ -42,6 +42,7 @@
   .p-header {
     &__form {
       width: calc(546 / 1920 * 100vw + 60px);
+      height: 50px;
     }
     &__outer {
       display: flex;

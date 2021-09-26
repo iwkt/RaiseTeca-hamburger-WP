@@ -90,11 +90,11 @@
 
 .c-round-btn {
   display: inline-block;
-  padding: 10px 10px;
+  padding: 10px;
   border: 2px solid transparent;
   border-radius: 30px;
-  width: 168px;
-  max-width: 100%;
+  width: calc(163 / 375 * 100vw);
+  max-width: 163px;
   font-size: 1.6rem;
   text-align: center;
   font-weight: bold;
@@ -104,8 +104,9 @@
   font-family: "M+ 1m";
   
   @include mq (lg){
-    padding: 27px 10px;
-    width: 298px;
+    padding: calc(76 / 1553 * 100%) 0.7em;
+    width: calc(292 / 1024 * 100vw);
+    min-width: 292px;
     // padding: 27px 106px;
     border-radius: 50px;
   }
@@ -150,7 +151,7 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
     cursor: pointer;
     font-family: "M+ 1m";
     @include mq() {
-      width: calc(75% - 14px);
+      width: calc(50% - 14px);
     }
   }
 
