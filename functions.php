@@ -23,9 +23,17 @@ function setting_script()
 {
   remove_filter('the_excerpt', 'wpautop');//pタグの消去
   wp_enqueue_style('reset_style', get_template_directory_uri() . '/assets/css/foundation/reset.css', array());
-  // wp_resource_hints('font_NotoSansJP,', '//fonts.googleapis.com', array());
-  // wp_resource_hints('font_N', '"https://fonts.gstatic.com" crossorigin');
-  // wp_enqueue_style('font_google', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap', array());
+
+  wp_resource_hints('font_NotoSansJP,', '//fonts.googleapis.com', array());
+  wp_resource_hints('font_N', '"https://fonts.gstatic.com" crossorigin');
+  wp_enqueue_style('font_google', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap', array());
+  
+  wp_resource_hints('font_Roboto,', '//fonts.googleapis.com', array());
+  wp_resource_hints('font_N', '"https://fonts.gstatic.com" crossorigin');
+  wp_enqueue_style('font_google_Roboto', '//fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap', array());
+
+  wp_enqueue_style('M+PLUS+1p', '//fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&display=swap', array());
+
   wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.8.2/css/all.css', array(), '5.8.2');
   wp_enqueue_style('hamburger_css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), '1.0.0');

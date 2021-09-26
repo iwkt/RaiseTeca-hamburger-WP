@@ -17,6 +17,26 @@
         こちらはArchive.php
       </p>
 
+      <!-- <?php $cat = single_cat_title('', false) ?>
+        <?php
+        if ($cat == "チーズバーガー") :
+        ?>
+          <?php get_template_part('recomendation_cheese'); ?>
+
+        <?php else : ?>
+      <div class="col-full">
+        <div class="wrap-col">
+          <p class="p-branch__search-result">検索キーワードに該当する記事がありませんでした。</p>
+        </div>
+      </div>
+
+    <?php
+        endif;
+    ?> -->
+
+      </p>
+    </article>
+
     <section id="post-<?php the_ID(); ?>" <?php post_class('p-order'); ?> class="p-order">
       <ul class="p-order__items">
 
@@ -31,6 +51,7 @@
 
       </div>
     </section>
+    こちらはArchive.php
 </main>
 <!-- l-container__left  -->
 

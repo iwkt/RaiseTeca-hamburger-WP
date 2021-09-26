@@ -13,7 +13,12 @@
   <section class="p-branch c-section__container">
     <ul class="p-branch__wrapper">
       <li class="p-branch__item u-overLayer__parent">
-        <a href="#">
+        <?php
+        // $takeout = get_term_by('slug', 'takeout', 'dep');
+        $item_link = get_term_link('takeout', 'dep');
+        ?>
+        <a href="<?php echo $item_link; ?>">
+          <!-- <a href=" #"> -->
           <div class="p-branch__for-hover">
             <img class="p-branch__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/takeout.jpg" />
             <div class="p-branch__layer u-overLayer__child u-center--column-sb">
@@ -34,24 +39,29 @@
       </li>
 
       <li class="p-branch__item u-overLayer__parent">
-        <a href="#">
-          <div class="p-branch__for-hover">
-            <img class="p-branch__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/eatin@2x.jpg" />
-            <div class="p-branch__layer u-overLayer__child u-center--column-sb">
-              <h2 class="p-branch__item__title p-text-bar">Eat In</h2>
-              <ul class="p-branch__boxs">
-                <li class="p-branch__textBox">
-                  <h3 class="c-textBox__title p-branch__title">Take OUT</h3>
-                  <p class="c-textBox__description">当店のテイクアウトで利用できる商品を掲載しています。</p>
-                </li>
-                <li class="p-branch__textBox">
-                  <h3 class="c-textBox__title p-branch__title">Take OUT</h3>
-                  <p class="c-textBox__description">当店のテイクアウトで利用できる商品を掲載しています。</p>
-                </li>
-              </ul>
+        <?php
+        // $takeout = get_term_by('slug', 'eatin', 'dep');
+        $item_link = get_term_link('eatin', 'dep');
+        ?>
+        <a href="<?php echo $item_link; ?>">
+          <!-- <a href="#"> -->
+            <div class="p-branch__for-hover">
+              <img class="p-branch__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/eatin@2x.jpg" />
+              <div class="p-branch__layer u-overLayer__child u-center--column-sb">
+                <h2 class="p-branch__item__title p-text-bar">Eat In</h2>
+                <ul class="p-branch__boxs">
+                  <li class="p-branch__textBox">
+                    <h3 class="c-textBox__title p-branch__title">Take OUT</h3>
+                    <p class="c-textBox__description">当店のテイクアウトで利用できる商品を掲載しています。</p>
+                  </li>
+                  <li class="p-branch__textBox">
+                    <h3 class="c-textBox__title p-branch__title">Take OUT</h3>
+                    <p class="c-textBox__description">当店のテイクアウトで利用できる商品を掲載しています。</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
       </li>
     </ul>
   </section>

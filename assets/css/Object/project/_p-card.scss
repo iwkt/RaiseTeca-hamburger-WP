@@ -25,6 +25,7 @@
     font-weight: 400;
     line-height: 1.44em;
     margin-bottom: 4rem;
+    padding-bottom: 10px;
   }
   &__btn-area {
     text-align: center;
@@ -80,4 +81,26 @@
       padding-right: 6.3rem;
     }
   }
+}
+
+//////////////////////////////////
+//wpのsingl用
+.p-product__media--single {
+  color: #3C2B1C;
+  margin: 6rem 0;
+}
+.p-mainvisual__title--font-lg--single {
+  font-size: 4rem;
+  color: #fff;
+}
+.p-card__img--single {
+  width: 40%;
+  margin: auto;
+}
+.p-card__sub-title--single {
+  margin-bottom: 3rem !important;
+}
+.p-card__text--single {
+  color: #3C2B1C;
+  margin-bottom: 6rem !important;
 }

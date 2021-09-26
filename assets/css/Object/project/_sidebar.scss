@@ -48,7 +48,7 @@
     }
   }
   &__menu {
-    padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
+    padding: 21.2rem 1.5rem 0 46px;
     color: #707070;
   }
   &__submenu-items {
@@ -56,6 +56,14 @@
   }
   &__submenu-item {
     margin-bottom: 2.3rem;
+  }
+}
+
+// =========================================
+.p-sidebar__menu {
+  &.p-menu-global-navigation-custom {
+    padding: 21.2rem 1.5rem 0 46px;
+
   }
 }
 
@@ -69,9 +77,11 @@
       display: none;
     }
   }
-  #menu-global-navigation-custom {
+  .p-sidebar__menu.p-menu-global-navigation-custom { //WPオリジナル
     padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
-    color: #707070;
+  }
+  .p-sidebar__menu.p-sidebar__item-menu {//WPオリジナル
+    padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
   }
 }
 // @media(min-width: 1024px) {
@@ -84,3 +94,5 @@
 //     }
 //   }
 // }
+
+//WPオリジナルーーーーーーーーーーーーーーーーーーーーーーーー
