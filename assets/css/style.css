@@ -1647,7 +1647,7 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
 }
 
 .p-sidebar__menu {
-  padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
+  padding: 21.2rem 1.5rem 0 46px;
   color: #707070;
 }
 
@@ -1659,6 +1659,10 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   margin-bottom: 2.3rem;
 }
 
+.p-sidebar__menu.p-menu-global-navigation-custom {
+  padding: 21.2rem 1.5rem 0 46px;
+}
+
 @media screen and (min-width: 1024px) {
   .p-sidebar {
     position: static;
@@ -1668,14 +1672,12 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   .p-sidebar__btn-close {
     display: none;
   }
-  #menu-global-navigation-custom {
+  .p-sidebar__menu.p-menu-global-navigation-custom {
     padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
-    color: #707070;
   }
-}
-.p-sidebar__menu.p-sidebar__item-menu {
-      padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
-    color: #707070;
+  .p-sidebar__menu.p-sidebar__item-menu {
+    padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
+  }
 }
 
 figure[class].wp-block-table {
