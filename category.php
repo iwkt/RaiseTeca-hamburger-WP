@@ -14,22 +14,23 @@
       <h2 class="p-article__title">当店の人気シリーズ</h2>
       <p class="p-article__text">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium dolores minima distinctio expedita aut quos quaerat labore ea, asperiores et, alias mollitia? Ad, quibusdam porro neque tenetur culpa dignissimos? Deserunt.
-        こちらはArchive-item.php
+        こちらはArchive.php
       </p>
 
-    <section id="post-<?php the_ID(); ?>" <?php post_class('p-order'); ?>>
+    <section id="post-<?php the_ID(); ?>" <?php post_class('p-order'); ?> class="p-order">
       <ul class="p-order__items">
 
-        <?php get_template_part('loop', 'main'); ?>
+        <?php get_template_part('loop', 'post'); ?>
 
       </ul>
     </section>
 
     <section class="p-page-nation">
-      <?php wp_pagenavi(); ?><!-- plugin pagenation -->
+
+        <?php wp_pagenavi(); ?><!-- plugin pagenation -->
+
       </div>
     </section>
-    こちらはArchive-item.php
 </main>
 <!-- l-container__left  -->
 

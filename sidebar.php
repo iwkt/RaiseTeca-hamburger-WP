@@ -25,11 +25,11 @@
     </nav> -->
 
     <!-- こちらはカスタムカテゴリ -->
-    <nav <?php post_class('hoge'); ?>>
+    <nav class="globalNavi">
       <?php
       $args = array(
         'menu'        => 'item_menu',
-        'menu_class'  => 'p-sidebar__menu p-sidebar__item-menu', //mainのulに付与される
+        'menu_class'  => 'p-sidebar__menu p-sidebar__item-menu',//mainのulに付与される
         'container' => false,
       );
       wp_nav_menu($args);
