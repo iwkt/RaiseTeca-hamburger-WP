@@ -1632,35 +1632,23 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   }
 }
 
-.p-sidebar__mainmenu-item {
-  margin-bottom: 2.3rem;
+.p-sidebar__menu.p-sidebar__item-menu {
+  color: #707070;
+  padding: 21.2rem 1.5rem 0 46px;
 }
 
-.p-sidebar__mainmenu-item .sub-menu {
+.p-sidebar__menu.p-sidebar__item-menu .sub-menu {
   padding-left: 2rem;
 }
 
-.p-sidebar__mainmenu-item > a {
+.p-sidebar__menu.p-sidebar__item-menu .menu-item {
+  margin-bottom: 2.3rem;
+}
+
+.p-sidebar__menu.p-sidebar__item-menu > li > a {
+  font-weight: bold;
   display: inline-block;
   margin-bottom: 2.3rem;
-  font-weight: bold;
-}
-
-.p-sidebar__menu {
-  padding: 21.2rem 1.5rem 0 46px;
-  color: #707070;
-}
-
-.p-sidebar__submenu-items {
-  padding-left: 2rem;
-}
-
-.p-sidebar__submenu-item {
-  margin-bottom: 2.3rem;
-}
-
-.p-sidebar__menu.p-menu-global-navigation-custom {
-  padding: 21.2rem 1.5rem 0 46px;
 }
 
 @media screen and (min-width: 1024px) {

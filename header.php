@@ -23,7 +23,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> class="body js-menu">
+<body <?php body_class('body js-menu'); ?> class="body js-menu">
   <?php wp_body_open(); ?>
     <div class="l-global-container js-menu">
       <div class="l-container">

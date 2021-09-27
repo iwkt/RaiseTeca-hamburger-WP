@@ -1,8 +1,8 @@
 <div class="l-container__right p-sidebar js-menu">
   <button id="MenuBtn" class="p-sidebar__btn-close"><span class="c-close-btn"></span></button>
   <div id="foodMenu">
-    <nav class="globalNavi">
-      <?php
+    <!-- <nav class="globalNavi">
+      <//?php
       $args = array(
         'menu'        => 'gmenu',
         'menu_class'  => 'p-sidebar__menu',
@@ -10,11 +10,11 @@
       );
       wp_nav_menu($args);
       ?>
-    </nav>
+    </nav> -->
 
     <!-- こちらはカスタムカテゴリ -->
-    <nav class="globalNavi">
-      <?php
+    <!-- <nav class="globalNavi">
+      <//?php
       $args = array(
         'menu'        => 'global-navigation-custom',
         'menu_class'  => 'p-sidebar__menu p-menu-global-navigation-custom',
@@ -22,14 +22,14 @@
       );
       wp_nav_menu($args);
       ?>
-    </nav>
+    </nav> -->
 
     <!-- こちらはカスタムカテゴリ -->
-    <nav class="globalNavi">
+    <nav <?php post_class('hoge'); ?>>
       <?php
       $args = array(
         'menu'        => 'item_menu',
-        'menu_class'  => 'p-sidebar__menu p-sidebar__item-menu',
+        'menu_class'  => 'p-sidebar__menu p-sidebar__item-menu', //mainのulに付与される
         'container' => false,
       );
       wp_nav_menu($args);
