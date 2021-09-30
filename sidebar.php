@@ -25,7 +25,7 @@
     </nav> -->
 
     <!-- こちらはカスタムカテゴリ -->
-    <nav class="globalNavi">
+    <nav class="p-sidebar__globalNavi">
       <?php
       $args = array(
         'menu'        => 'item_menu',

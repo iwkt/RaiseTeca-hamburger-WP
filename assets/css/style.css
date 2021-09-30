@@ -465,21 +465,10 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   }
 }
 
-.p-access__map {
-  background-image: url(../images/map_mobile@2x.png);
-  background-size: contain;
-  width: 100%;
-}
-
-@media screen and (min-width: 600px) {
-  .p-access__map {
-    background-image: url(../images/map@2x.jpg);
-  }
-}
-
 .p-access-text__inner {
   min-height: 690px;
   padding: 4rem;
+  pointer-events: none;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(60%, rgba(0, 0, 0, 0.6)), color-stop(60%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.3) 100%);
 }
@@ -495,16 +484,49 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
 @media screen and (min-width: 1200px) {
   .p-access-text__inner {
     width: 100%;
+    padding: 0;
     background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), color-stop(60%, rgba(0, 0, 0, 0.6)), color-stop(60%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3)));
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.3) 100%);
   }
 }
 
+.p-access-text__wrapper {
+  pointer-events: none;
+}
+
 @media screen and (min-width: 1200px) {
   .p-access-text__wrapper {
     width: 60%;
-    padding: 12rem;
+    padding: calc(83 / 1920 * 100vw) calc(120 / 1920 * 100vw);
   }
+}
+
+.p-access {
+  position: relative;
+}
+
+.p-access__map {
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .p-access__map {
+    max-height: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .p-access__map {
+    max-height: 650px;
+  }
+}
+
+.p-access-text__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .p-article {
@@ -1328,7 +1350,7 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1440px) {
   .p-card__body {
     padding-left: 6.3rem;
     padding-right: 6.3rem;
@@ -1599,6 +1621,7 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   left: 15%;
   overflow-y: scroll;
   height: 100vh;
+  mix-blend-mode: 10rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -1649,6 +1672,11 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   font-weight: bold;
   display: inline-block;
   margin-bottom: 2.3rem;
+}
+
+.p-sidebar__globalNavi {
+  height: 100vh;
+  margin-bottom: 10rem;
 }
 
 @media screen and (min-width: 1024px) {

@@ -29,9 +29,7 @@ else : // 検索キーワードがあるとき
             <p class="p-card__text"><?php the_excerpt(); ?></p>
 
             <div class="p-card__btn-area">
-              <div class="c-round-btn">
-                <a href="<?php the_permalink(); ?>">詳しく見る</a>
-              </div>
+              <a class="c-round-btn" href="<?php the_permalink(); ?>">詳しく見る</a>
             </div>
           </div><!-- "p-card"__body-->
         </div><!-- "p-card"-->
