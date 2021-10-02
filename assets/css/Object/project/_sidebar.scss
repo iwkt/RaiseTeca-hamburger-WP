@@ -15,6 +15,7 @@
     left: $width;//variableに記載
     overflow-y: scroll;
     height: 100vh;
+    mix-blend-mode: 10rem;
     @include mq() {
       $width: calc(100% - 367 / 834 * 100%);
       left: $width;//variableに記載
@@ -36,35 +37,52 @@
       right: calc(17px + 56%);
     }
   }
-  &__mainmenu-item {
-    margin-bottom: 2.3rem;
-    & .sub-menu { //sidebarの字下げのため無理矢理追記。WPで自動追加されるクラス名
-      padding-left: 2rem;
-    }
-    & > a { //追記
-      display: inline-block;
-      margin-bottom: 2.3rem;
-      font-weight: bold;
-    }
-  }
-  &__menu {
-    padding: 21.2rem 1.5rem 0 46px;
-    color: #707070;
-  }
-  &__submenu-items {
+  // &__mainmenu-item {
+  //   margin-bottom: 2.3rem;
+  //   & .sub-menu { //sidebarの字下げのため無理矢理追記。WPで自動追加されるクラス名
+  //     padding-left: 2rem;
+  //   }
+  //   & > a { //追記
+  //     display: inline-block;
+  //     margin-bottom: 2.3rem;
+  //     font-weight: bold;
+  //   }
+  // }
+  // &__menu {
+  //   padding: 21.2rem 1.5rem 0 46px;
+  //   color: #707070;
+  // }
+  // &__submenu-items {
+  //   padding-left: 2rem;
+  // }
+  // &__submenu-item {
+  //   margin-bottom: 2.3rem;
+  // }
+}
+
+// =========================================
+//menu-item main,subにかかわらずliに付与される
+//.p-sidebar__menu.p-sidebar__item-menu phpで開発者が任意に決めたmainのulに付与
+
+.p-sidebar__menu.p-sidebar__item-menu  { //wp
+  color: #707070;
+  padding: 21.2rem 1.5rem 0 46px;
+  & .sub-menu { //sidebarの字下げのため無理矢理追記。WPで自動追加されるクラス名
     padding-left: 2rem;
   }
-  &__submenu-item {
+  & .menu-item {
+    margin-bottom: 2.3rem;
+  }
+  & > li > a {
+    font-weight: bold;
+    display: inline-block;
     margin-bottom: 2.3rem;
   }
 }
 
-// =========================================
-.p-sidebar__menu {
-  &.p-menu-global-navigation-custom {
-    padding: 21.2rem 1.5rem 0 46px;
-
-  }
+.p-sidebar__globalNavi {
+  // height: 100vh;
+  margin-bottom: 10rem;
 }
 
 // =========================================

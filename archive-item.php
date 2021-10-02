@@ -17,7 +17,7 @@
         こちらはArchive-item.php
       </p>
 
-    <section id="post-<?php the_ID(); ?>" <?php post_class('p-order'); ?> class="p-order">
+    <section id="post-<?php the_ID(); ?>" <?php post_class('p-order'); ?>>
       <ul class="p-order__items">
 
         <?php get_template_part('loop', 'main'); ?>

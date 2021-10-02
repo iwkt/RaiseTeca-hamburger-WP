@@ -19,25 +19,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> -->
   <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+  <!-- slickのCSS -->
+
 
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> class="body js-menu">
+<body <?php body_class('body js-menu'); ?> class="body js-menu">
   <?php wp_body_open(); ?>
-    <div class="l-global-container js-menu">
-      <div class="l-container">
-        <div class="l-container__left">
-          <div class="l-main__container">
+  <div class="l-global-container js-menu">
+    <div class="l-container">
+      <div class="l-container__left">
+        <div class="l-main__container">
 
-            <header class="l-header">
-              <button id="js-menu_open" class="p-header__menu-btn  p-menu">Menu</button>
-              <div class="p-header__wrapper">
-                <div class="p-header__outer">
-                  <h1 class="p-header__title"><a href="<?php echo esc_url(home_url()); ?> ">Hamburger</a></h1>
-                  <div class="p-header__form">
-                    <?php get_search_form(); ?>
-                  </div>
+          <header class="l-header">
+            <button id="js-menu_open" class="p-header__menu-btn  p-menu">Menu</button>
+            <div class="p-header__wrapper">
+              <div class="p-header__outer">
+                <h1 class="p-header__title"><a href="<?php echo esc_url(home_url()); ?> ">Hamburger</a></h1>
+                <div class="p-header__form">
+                  <?php get_search_form(); ?>
                 </div>
               </div>
-            </header>
+            </div>
+          </header>

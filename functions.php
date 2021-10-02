@@ -12,7 +12,7 @@ function raisetech_title($title)
   if (is_front_page() && is_home()) { //トップページなら
     $title = get_bloginfo('name', 'display');
   } elseif (is_singular()) { //シングルページなら
-    $title = single_post_title('', false);
+    $title = wp_title('/', false, 'right' ) . get_bloginfo('name');
   }
   return $title;
 }
@@ -23,6 +23,7 @@ function setting_script()
 {
   remove_filter('the_excerpt', 'wpautop');//pタグの消去
   wp_enqueue_style('reset_style', get_template_directory_uri() . '/assets/css/foundation/reset.css', array());
+  wp_enqueue_style('swiper', "https://unpkg.com/swiper@7/swiper-bundle.min.css");
 
   wp_resource_hints('font_NotoSansJP,', '//fonts.googleapis.com', array());
   wp_resource_hints('font_N', '"https://fonts.gstatic.com" crossorigin');
@@ -36,18 +37,17 @@ function setting_script()
 
   wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.8.2/css/all.css', array(), '5.8.2');
   wp_enqueue_style('hamburger_css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
+
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), '1.0.0');
 ;
   //script
   wp_enqueue_script('jQuery', '//code.jquery.com/jquery-3.2.1.min.js');
   wp_enqueue_script('Vue', 'https://unpkg.com/vue@next');
   //footerで
+  wp_enqueue_script('swiper-js', "https://unpkg.com/swiper@7/swiper-bundle.min.js", array(), false, true);
+  wp_enqueue_script('swiper_js', get_template_directory_uri() . '/assets/js/swiper.js', array(), false, true);
   wp_enqueue_script('food_menu', get_template_directory_uri() . '/assets/js/food_menu.js', array(), false, true);
   wp_enqueue_script('menu_open', get_template_directory_uri() . '/assets/js/menu_open.js', array(), false, true);
-  // wp_enqueue_script('add_class', get_template_directory_uri() . '/assets/js/add_class.js', array(), false, true);
-  // wp_enqueue_script('hmgr', get_template_directory_uri() . '/js/hmgr.js', array(), false, true);
-  // wp_enqueue_script('hover', get_template_directory_uri() . '/js/hover.js', array(), false, true);
-  // wp_enqueue_script('acd', get_template_directory_uri() . '/js/acd.js', array(), false, true);
 }
 add_action('wp_enqueue_scripts', 'setting_script');
 

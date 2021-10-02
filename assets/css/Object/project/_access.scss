@@ -27,17 +27,18 @@
       font-size: 1.6rem;
     }
   }
-  &__map {
-    background-image: url(../images/map_mobile@2x.png);
-    background-size: contain;
-    width: 100%;
-    @include mq() {
-      background-image: url(../images/map@2x.jpg);
-    }
-  }
+  // &__map {
+  //   background-image: url(../images/map_mobile@2x.png);
+  //   background-size: contain;
+  //   width: 100%;
+  //   @include mq() {
+  //     background-image: url(../images/map@2x.jpg);
+  //   }
+  // }
   &-text__inner {
     min-height: 690px;
     padding: 4rem;
+    pointer-events: none;
     background: linear-gradient(
       180deg, 
       rgba($color: #000000, $alpha: 0.6) 0%, 
@@ -47,12 +48,13 @@
     // background-color: rgba($color: #000000, $alpha: 0.6);
     @include mq() {
       min-height: 41.2rem;
+      
       background-image: none;
       background-color: rgba($color: #000000, $alpha: 0.6);
     }
     @include mq(lg) {
       width: 100%;
-      // padding: 12rem;
+      padding: 0;
       background: linear-gradient(
         90deg, 
         rgba($color: #000000, $alpha: 0.6) 0%, 
@@ -62,9 +64,39 @@
     }
   }
   &-text__wrapper {
+    pointer-events: none;
     @include mq(lg) {
       width: 60%;
-      padding: 12rem;
+      // padding: calc(120 / 1920 * 100vw);
+      padding: calc(83 / 1920 * 100vw) calc(120 / 1920 * 100vw) ;
     }
   }
+}
+
+.p-access {
+  position: relative;
+}
+.p-access__map {
+  width: 100%;
+  @include mq () {
+    max-height: 450px;
+    // height: calc(412 / 832 * 100vw);
+  }
+  @include mq (lg) {
+    // height: calc(412 / 832 * 100vw);
+    max-height: 650px;
+  }
+  @include mq (xl) {
+    // height: calc(650 / 1920 * 100vw);
+    
+  }
+}
+
+
+.p-access-text__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
