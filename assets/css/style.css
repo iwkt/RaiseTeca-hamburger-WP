@@ -834,7 +834,6 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
           align-items: center;
   padding-left: 3.5rem;
   height: calc(285 / 375 * (100vw - 13px));
-  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -848,7 +847,6 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
     height: calc(512 / 1920 * 100vw);
     max-height: 512px;
     padding: 0 0 0 6.5rem;
-    margin-bottom: 6rem;
   }
 }
 
@@ -910,14 +908,23 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
 }
 
 .p-mainvisual__layer--wide {
-  height: calc(225 / 375 * (100vw - 13px));
+  height: calc(285 / 375 * (100vw - 13px));
   background-position: 50% 50%;
   background-size: cover;
 }
 
 @media screen and (min-width: 600px) {
   .p-mainvisual__layer--wide {
-    max-height: 500px;
+    height: calc(285 / 832 * 100vw);
+    max-height: 320px;
+    padding: 0 0 0 6.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .p-mainvisual__layer--wide {
+    height: calc(530 / 1920 * 100vw);
+    max-height: 530px;
     padding: 0 0 0 6.5rem;
   }
 }
@@ -977,6 +984,16 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   }
   .p-mainvisual__title--font-lg {
     font-size: 6rem;
+  }
+}
+
+.swiper {
+  z-index: -1;
+}
+
+@media screen and (min-width: 600px) {
+  .swiper-wrapper {
+    width: 70vw;
   }
 }
 
@@ -1675,7 +1692,6 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
 }
 
 .p-sidebar__globalNavi {
-  height: 100vh;
   margin-bottom: 10rem;
 }
 

@@ -19,9 +19,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> -->
   <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <!-- slickのCSS -->
 
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+
   <?php wp_head(); ?>
 </head>
 

@@ -1,13 +1,15 @@
 <?php get_header(); ?>
 
 <main>
-
+  <!-- <//?php get_template_part('slick'); ?> -->
+  
   <section class="p-mainvisual">
-    <div class="p-mainvisual__wrapper">
+    <?php get_template_part('swiper'); ?>
+    <!-- <div class="p-mainvisual__wrapper">
       <div class="p-mainvisual__layer--index">
         <h2 class="p-mainvisual__title c-title-text">Raise Burger</h2>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <section class="p-branch c-section__container">
