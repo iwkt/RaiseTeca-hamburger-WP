@@ -911,6 +911,7 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   height: calc(285 / 375 * (100vw - 13px));
   background-position: 50% 50%;
   background-size: cover;
+  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -926,6 +927,7 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
     height: calc(530 / 1920 * 100vw);
     max-height: 530px;
     padding: 0 0 0 6.5rem;
+    margin-bottom: 6rem;
   }
 }
 
