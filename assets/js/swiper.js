@@ -4,10 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     direction: 'horizontal',
     effect: "slide",
     loop: true,
+    speed: 800,
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-      delay: 3000,
+      delay: 6000,
       disableOnInteraction: true,
     },
     pagination: {
