@@ -56,5 +56,3 @@ else : // 検索キーワードがあるとき
 
   <?php endif; ?>
 <?php endif; ?>
-
-loop-search

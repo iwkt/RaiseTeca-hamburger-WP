@@ -721,6 +721,12 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   font-size: 1.4rem;
 }
 
+.message_error {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem;
+}
+
 .p-footer__layer {
   background-image: url(../images/bgi_footer@2x.png);
   width: 100%;

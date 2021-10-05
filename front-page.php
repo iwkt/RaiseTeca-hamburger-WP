@@ -1,8 +1,29 @@
 <?php get_header(); ?>
 
+<?php
+
+$plugins = array(
+  "get_field" => "ACF",
+  "wp_pagenavi" => "PageNav"
+);
+
+foreach ($plugins as $plugin => $name) {
+
+  if(!function_exists($plugin)){
+    $alert = "<script type='text/javascript'>
+      alert(
+        'ごめんなさい。 \\nこのテーマにはプラグイン『${name}』が必要です。\\n ダウンロードしたのちに有効にしてくださいね');
+       </script>";
+    echo $alert;
+    echo '<div class="message_error">';
+    echo '<p>エラー：プラグイン' . $name . 'を有効にしてください</p>';
+    echo '</div>';
+  }
+}
+?>
+
 <main>
-  <!-- <//?php get_template_part('slick'); ?> -->
-  
+
   <section class="p-mainvisual">
     <?php get_template_part('swiper'); ?>
     <!-- <div class="p-mainvisual__wrapper">

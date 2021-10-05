@@ -17,20 +17,25 @@
         こちらはArchive.php
       </p>
 
-    <section id="post-<?php the_ID(); ?>" <?php post_class('p-order'); ?> class="p-order">
-      <ul class="p-order__items">
+      <section id="post-<?php the_ID(); ?>" <?php post_class('p-order'); ?> class="p-order">
+        <ul class="p-order__items">
 
-        <?php get_template_part('loop', 'main'); ?>
+          <?php get_template_part('loop', 'main'); ?>
 
-      </ul>
-    </section>
+        </ul>
+      </section>
 
-    <section class="p-page-nation">
+      <section class="p-page-nation">
+        <?php
+        if (!function_exists("wp_pagenavi")) { 
+          echo '';
+        } else {
+          wp_pagenavi(); //plugin pagenation
+        }
+        ?>
 
-        <?php wp_pagenavi(); ?><!-- plugin pagenation -->
-
-      </div>
-    </section>
+  </div>
+  </section>
 </main>
 <!-- l-container__left  -->
 
