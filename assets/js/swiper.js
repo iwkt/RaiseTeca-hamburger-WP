@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     effect: "slide",
     loop: true,
     speed: 800,
-    spaceBetween: 30,
+    spaceBetween: 0,
     centeredSlides: true,
     autoplay: {
       delay: 6000,
