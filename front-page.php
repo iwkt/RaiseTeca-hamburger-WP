@@ -3,7 +3,7 @@
 <?php
 
 $plugins = array(
-  "get_field" => "ACF",
+  "get_field" => "Advanced Custom Fields",
   "wp_pagenavi" => "PageNav"
 );
 
