@@ -1,8 +1,35 @@
 <?php
 add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
-add_theme_support('menus');
+// add_theme_support('menus');
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
+register_nav_menus();
+wp_link_pages();
+add_theme_support('automatic-feed-links');
+add_theme_support("wp-block-styles");
+add_theme_support("responsive-embeds");
+add_theme_support("custom-logo");
+add_theme_support("align-wide");
+add_theme_support("custom-background");
+add_editor_style() ;
+
+$defaults = array(
+  'default-image' => '',
+  'random-default' => false,
+  'width' => 0,
+  'height' => 0,
+  'flex-height' => false,
+  'flex-width' => false,
+  'default-text-color' => '',
+  'header-text' => true,
+  'uploads' => true,
+  'wp-head-callback' => '',
+  'admin-head-callback' => '',
+  'admin-preview-callback' => '',
+  'video' => false,
+  'video-active-callback' => 'is_front_page',
+);
+add_theme_support('custom-header', $defaults);
 
 // set_post_thumbnail_size(250, 550);
 
@@ -41,7 +68,7 @@ function setting_script()
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), '1.0.0');
 ;
   //script
-  wp_enqueue_script('jQuery', '//code.jquery.com/jquery-3.2.1.min.js');
+  // wp_enqueue_script('jQuery', '//code.jquery.com/jquery-3.2.1.min.js');
   wp_enqueue_script('Vue', 'https://unpkg.com/vue@next');
   //footerで
   wp_enqueue_script('swiper-js', "https://unpkg.com/swiper@7/swiper-bundle.min.js", array(), false, true);

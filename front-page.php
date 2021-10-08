@@ -43,7 +43,7 @@ foreach ($plugins as $plugin => $name) {
         <a href="<?php echo $item_link; ?>">
           <!-- <a href=" #"> -->
           <div class="p-branch__for-hover">
-            <img class="p-branch__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/takeout.jpg" />
+            <img class="p-branch__img" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/takeout.jpg" />
             <div class="p-branch__layer u-overLayer__child u-center--column-sb">
               <h2 class="p-branch__item__title p-text-bar">Take Out</h2>
               <ul class="p-branch__boxs">
@@ -69,7 +69,7 @@ foreach ($plugins as $plugin => $name) {
         <a href="<?php echo $item_link; ?>">
           <!-- <a href="#"> -->
           <div class="p-branch__for-hover">
-            <img class="p-branch__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/eatin@2x.jpg" />
+            <img class="p-branch__img" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/eatin@2x.jpg" />
             <div class="p-branch__layer u-overLayer__child u-center--column-sb">
               <h2 class="p-branch__item__title p-text-bar">Eat In</h2>
               <ul class="p-branch__boxs">

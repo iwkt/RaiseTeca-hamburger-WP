@@ -40,8 +40,11 @@
   margin-bottom: 20px;
 }
 
-.u-mb--30 {
+.u-mb--ml {
   margin-bottom: 30px;
+  @include mq(){
+    margin-bottom: 60px;
+  }
 }
 
 .u-mb--l {

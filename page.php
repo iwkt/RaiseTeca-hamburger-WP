@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main>
 
-  <section class="p-mainvisual">
+  <section class="p-mainvisual u-mb--ml">
     <div class="p-mainvisual__wrapper">
       <div class="p-mainvisual__layer--shop">
         <h2 class="p-mainvisual__title--font-lg c-title-text">ショップについて</h2>
@@ -21,7 +21,7 @@
     endif; ?>
     <!--  /ループ終わり -->
 
-    
+
   </div>
   <!--c-section__container-->
 </main>

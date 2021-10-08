@@ -1777,6 +1777,40 @@ td {
   margin-bottom: 6rem;
 }
 
+.wp-caption {
+  text-align: center;
+  max-width: 100%;
+}
+
+.wp-caption-text {
+  display: inline-block;
+  text-align: left;
+  color: #8a8a8a;
+}
+
+.gallery-caption {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bypostauthor {
+  background: mediumslateblue;
+}
+
+.alignright {
+  display: block;
+  margin-right: auto;
+}
+
+.alignleft {
+  display: block;
+  margin-left: auto;
+}
+
+.aligncenter {
+  display: block;
+}
+
 .blocks-gallery-grid .blocks-gallery-item, .wp-block-gallery .blocks-gallery-image, .wp-block-gallery .blocks-gallery-item {
   margin: 0 0em 3rem 0;
   display: -webkit-box;
@@ -1934,8 +1968,14 @@ td {
   margin-bottom: 20px;
 }
 
-.u-mb--30 {
+.u-mb--ml {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 600px) {
+  .u-mb--ml {
+    margin-bottom: 60px;
+  }
 }
 
 .u-mb--l {
