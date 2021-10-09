@@ -25,11 +25,12 @@
     </nav> -->
 
     <!-- こちらはカスタムカテゴリ -->
+    <h3 class="p-sidebar__menu-title">MENU</h3>
     <nav class="p-sidebar__globalNavi">
       <?php
       $args = array(
         'menu'        => 'item_menu',
-        'menu_class'  => 'p-sidebar__menu p-sidebar__item-menu',//mainのulに付与される
+        'menu_class'  => 'p-sidebar__menu p-sidebar__item-menu', //mainのulに付与される
         'container' => false,
       );
       wp_nav_menu($args);

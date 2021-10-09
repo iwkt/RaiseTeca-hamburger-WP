@@ -1680,6 +1680,20 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
   }
 }
 
+.p-sidebar .p-sidebar__menu-title {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .p-sidebar .p-sidebar__menu-title {
+    display: block;
+    padding: 9rem 0 0 calc(46 / 1920 * 100vw);
+    margin: 0;
+    color: #707070;
+    font-weight: bold;
+  }
+}
+
 .p-sidebar__menu.p-sidebar__item-menu {
   color: #707070;
   padding: 21.2rem 1.5rem 0 46px;
@@ -1713,10 +1727,10 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
     display: none;
   }
   .p-sidebar__menu.p-menu-global-navigation-custom {
-    padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
+    padding: 9rem 1.5rem 0 calc(46 / 1920 * 100vw);
   }
   .p-sidebar__menu.p-sidebar__item-menu {
-    padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
+    padding: 9rem 1.5rem 0 calc(46 / 1920 * 100vw);
   }
 }
 

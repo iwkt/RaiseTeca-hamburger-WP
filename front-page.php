@@ -9,7 +9,7 @@ $plugins = array(
 
 foreach ($plugins as $plugin => $name) {
 
-  if(!function_exists($plugin)){
+  if (!function_exists($plugin)) {
     $alert = "<script type='text/javascript'>
       alert(
         'ごめんなさい。 \\nこのテーマにはプラグイン『${name}』が必要です。\\n ダウンロードしたのちに有効にしてくださいね');
@@ -21,7 +21,6 @@ foreach ($plugins as $plugin => $name) {
   }
 }
 ?>
-
 <main>
 
   <section class="p-mainvisual">
@@ -38,10 +37,14 @@ foreach ($plugins as $plugin => $name) {
       <li class="p-branch__item u-overLayer__parent">
         <?php
         // $takeout = get_term_by('slug', 'takeout', 'dep');
-        $item_link = get_term_link('takeout', 'dep');
+        if (!empty($item_link)) :
+          $item_link = get_term_link('takeout', 'dep');
         ?>
-        <a href="<?php echo $item_link; ?>">
-          <!-- <a href=" #"> -->
+          <a href="<?php echo $item_link; ?>">
+            <!-- <a href=" #"> -->
+          <?php
+        endif;
+          ?>
           <div class="p-branch__for-hover">
             <img class="p-branch__img" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/takeout.jpg" />
             <div class="p-branch__layer u-overLayer__child u-center--column-sb">
@@ -58,16 +61,18 @@ foreach ($plugins as $plugin => $name) {
               </ul>
             </div>
           </div>
-        </a>
+          </a>
       </li>
 
       <li class="p-branch__item u-overLayer__parent">
         <?php
         // $takeout = get_term_by('slug', 'eatin', 'dep');
-        $item_link = get_term_link('eatin', 'dep');
+        if (!empty($item_link)) :
+          $item_link = get_term_link('eatin', 'dep');
         ?>
-        <a href="<?php echo $item_link; ?>">
-          <!-- <a href="#"> -->
+          <a href="<?php echo $item_link; ?>">
+            <!-- <a href="#"> -->
+          <?php endif; ?>
           <div class="p-branch__for-hover">
             <img class="p-branch__img" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/eatin@2x.jpg" />
             <div class="p-branch__layer u-overLayer__child u-center--column-sb">
@@ -84,7 +89,7 @@ foreach ($plugins as $plugin => $name) {
               </ul>
             </div>
           </div>
-        </a>
+          </a>
       </li>
     </ul>
   </section>

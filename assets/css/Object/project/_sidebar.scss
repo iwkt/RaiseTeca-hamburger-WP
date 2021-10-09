@@ -37,6 +37,17 @@
       right: calc(17px + 56%);
     }
   }
+
+  .p-sidebar__menu-title {
+    display: none;
+    @include mq (md){
+      display: block;
+      padding: 9rem 0 0 calc(46 / 1920 * 100vw);
+      margin: 0;
+      color: #707070;
+      font-weight: bold;
+    }
+  }
   // &__mainmenu-item {
   //   margin-bottom: 2.3rem;
   //   & .sub-menu { //sidebarの字下げのため無理矢理追記。WPで自動追加されるクラス名
@@ -96,10 +107,10 @@
     }
   }
   .p-sidebar__menu.p-menu-global-navigation-custom { //WPオリジナル
-    padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
+    padding: 9rem 1.5rem 0 calc(46 / 1920 * 100vw);
   }
   .p-sidebar__menu.p-sidebar__item-menu {//WPオリジナル
-    padding: 21.2rem 1.5rem 0 calc(46 / 1920 * 100vw);
+    padding: 9rem 1.5rem 0 calc(46 / 1920 * 100vw);
   }
 }
 // @media(min-width: 1024px) {
