@@ -9,7 +9,6 @@
 </div>
 <!-- l-gloval-container -->
 
-
 <?php wp_footer(); ?>
 </body>
 

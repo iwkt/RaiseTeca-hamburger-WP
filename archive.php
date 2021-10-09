@@ -17,80 +17,25 @@
         こちらはArchive.php
       </p>
 
-      <!-- <?php $cat = single_cat_title('', false) ?>
+      <section id="post-<?php the_ID(); ?>" <?php post_class('p-order'); ?> class="p-order">
+        <ul class="p-order__items">
+
+          <?php get_template_part('loop', 'main'); ?>
+
+        </ul>
+      </section>
+
+      <section class="p-page-nation">
         <?php
-        if ($cat == "チーズバーガー") :
+        if (!function_exists("wp_pagenavi")) { 
+          echo '';
+        } else {
+          wp_pagenavi(); //plugin pagenation
+        }
         ?>
-          <?php get_template_part('recomendation_cheese'); ?>
 
-        <?php else : ?>
-      <div class="col-full">
-        <div class="wrap-col">
-          <p class="p-branch__search-result">検索キーワードに該当する記事がありませんでした。</p>
-        </div>
-      </div>
-
-    <?php
-        endif;
-    ?> -->
-
-      </p>
-    </article>
-
-    <section id="post-<?php the_ID(); ?>" <?php post_class('p-order'); ?> class="p-order">
-      <ul class="p-order__items">
-
-        <?php get_template_part('loop', 'main'); ?>
-
-      </ul>
-    </section>
-
-    <section class="p-page-nation">
-      <!-- <div class="p-page-nation__wapper--mobile"> -->
-
-        <!-- <a href="#">
-          <span class="p-page-nation__text--pre">prev</span>
-        </a>
-        <a href="#" class="p-page-nation__text--next">next</a> -->
-      <!-- </div> -->
-      <!-- <div class="p-page-nation__wapper--pc"> -->
-        <!-- <div class="p-page-naiton__page-number">page 1/10</div>
-        <ul class="p-page-nation__items">
-          <li class="p-page-nation__item">
-            <a class="p-page-nation__link" href="#">1</a>
-          </li>
-          <li class="p-page-nation__item">
-            <a class="p-page-nation__link" href="#">2</a>
-          </li>
-          <li class="p-page-nation__item">
-            <a class="p-page-nation__link" href="#">3</a>
-          </li>
-          <li class="p-page-nation__item">
-            <a class="p-page-nation__link" href="#">4</a>
-          </li>
-          <li class="p-page-nation__item">
-            <a class="p-page-nation__link" href="#">5</a>
-          </li>
-          <li class="p-page-nation__item">
-            <a class="p-page-nation__link" href="#">6</a>
-          </li>
-          <li class="p-page-nation__item">
-            <a class="p-page-nation__link" href="#">7</a>
-          </li>
-          <li class="p-page-nation__item">
-            <a class="p-page-nation__link" href="#">8</a>
-          </li>
-          <li class="p-page-nation__item">
-            <a class="p-page-nation__link" href="#">9</a>
-          </li>
-        </ul> -->
-
-        <?php wp_pagenavi(); ?><!-- plugin pagenation -->
-
-
-      </div>
-    </section>
-    こちらはArchive.php
+  </div>
+  </section>
 </main>
 <!-- l-container__left  -->
 

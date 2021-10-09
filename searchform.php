@@ -1,4 +1,4 @@
-<form id="searchform" method="get" action="<?php echo home_url('/'); ?>">
+<form id="searchform" class="p-search-form " method="get" action="<?php echo esc_url(home_url('/')); ?>">
   <label for="search">
     <div class="p-search__wrapper">
       <div class="p-search__field-wrapper mr">

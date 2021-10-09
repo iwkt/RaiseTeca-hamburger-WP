@@ -1,8 +1,35 @@
 <?php
 add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
-add_theme_support('menus');
+// add_theme_support('menus');
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
+register_nav_menus();
+wp_link_pages();
+add_theme_support('automatic-feed-links');
+add_theme_support("wp-block-styles");
+add_theme_support("responsive-embeds");
+add_theme_support("custom-logo");
+add_theme_support("align-wide");
+add_theme_support("custom-background");
+add_editor_style() ;
+
+$defaults = array(
+  'default-image' => '',
+  'random-default' => false,
+  'width' => 0,
+  'height' => 0,
+  'flex-height' => false,
+  'flex-width' => false,
+  'default-text-color' => '',
+  'header-text' => true,
+  'uploads' => true,
+  'wp-head-callback' => '',
+  'admin-head-callback' => '',
+  'admin-preview-callback' => '',
+  'video' => false,
+  'video-active-callback' => 'is_front_page',
+);
+add_theme_support('custom-header', $defaults);
 
 // set_post_thumbnail_size(250, 550);
 
@@ -12,7 +39,7 @@ function raisetech_title($title)
   if (is_front_page() && is_home()) { //トップページなら
     $title = get_bloginfo('name', 'display');
   } elseif (is_singular()) { //シングルページなら
-    $title = single_post_title('', false);
+    $title = wp_title('/', false, 'right' ) . get_bloginfo('name');
   }
   return $title;
 }
@@ -23,23 +50,31 @@ function setting_script()
 {
   remove_filter('the_excerpt', 'wpautop');//pタグの消去
   wp_enqueue_style('reset_style', get_template_directory_uri() . '/assets/css/foundation/reset.css', array());
-  // wp_resource_hints('font_NotoSansJP,', '//fonts.googleapis.com', array());
-  // wp_resource_hints('font_N', '"https://fonts.gstatic.com" crossorigin');
-  // wp_enqueue_style('font_google', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap', array());
+  wp_enqueue_style('swiper', "https://unpkg.com/swiper@7/swiper-bundle.min.css");
+
+  wp_resource_hints('font_NotoSansJP,', '//fonts.googleapis.com', array());
+  wp_resource_hints('font_N', '"https://fonts.gstatic.com" crossorigin');
+  wp_enqueue_style('font_google', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap', array());
+  
+  wp_resource_hints('font_Roboto,', '//fonts.googleapis.com', array());
+  wp_resource_hints('font_N', '"https://fonts.gstatic.com" crossorigin');
+  wp_enqueue_style('font_google_Roboto', '//fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap', array());
+
+  wp_enqueue_style('M+PLUS+1p', '//fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&display=swap', array());
+
   wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.8.2/css/all.css', array(), '5.8.2');
   wp_enqueue_style('hamburger_css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
+
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), '1.0.0');
 ;
   //script
-  wp_enqueue_script('jQuery', '//code.jquery.com/jquery-3.2.1.min.js');
+  // wp_enqueue_script('jQuery', '//code.jquery.com/jquery-3.2.1.min.js');
   wp_enqueue_script('Vue', 'https://unpkg.com/vue@next');
   //footerで
+  wp_enqueue_script('swiper-js', "https://unpkg.com/swiper@7/swiper-bundle.min.js", array(), false, true);
+  wp_enqueue_script('swiper_js', get_template_directory_uri() . '/assets/js/swiper.js', array(), false, true);
   wp_enqueue_script('food_menu', get_template_directory_uri() . '/assets/js/food_menu.js', array(), false, true);
   wp_enqueue_script('menu_open', get_template_directory_uri() . '/assets/js/menu_open.js', array(), false, true);
-  // wp_enqueue_script('add_class', get_template_directory_uri() . '/assets/js/add_class.js', array(), false, true);
-  // wp_enqueue_script('hmgr', get_template_directory_uri() . '/js/hmgr.js', array(), false, true);
-  // wp_enqueue_script('hover', get_template_directory_uri() . '/js/hover.js', array(), false, true);
-  // wp_enqueue_script('acd', get_template_directory_uri() . '/js/acd.js', array(), false, true);
 }
 add_action('wp_enqueue_scripts', 'setting_script');
 

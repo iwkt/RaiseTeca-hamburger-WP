@@ -12,7 +12,7 @@
     // background-position: 100% 100%;
     // background-size: cover;
     height: calc(285 / 375 * (100vw - 13px));
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
     @include mq(sm) {
       // background: url(../images/hamburger@2x.jpg);
       // background-position: 100% 100%;
@@ -24,17 +24,17 @@
       height: calc(512 / 1920 * 100vw);
       max-height: 512px;
       padding: 0 0 0 6.5rem;
-      margin-bottom: 6rem;
+      // margin-bottom: 6rem;
     }
 
     &--index {
       @extend .p-mainvisual__layer;
-      background: url(../images/mv_mobile608x800@2x.jpg);
+      background: url(../images/hamburger.jpg);
       background-position: 100% 100%;
       background-size: cover;
 
       @include mq() {
-        background: url(../images/hamburger@2x.jpg);
+        background: url(../images/hamburger.jpg);
         background-position: 100% 100%;
         background-size: cover;
       }
@@ -74,14 +74,22 @@
     }
     &--wide {
       @extend .p-mainvisual__layer;
-      height: calc(225 / 375 * (100vw - 13px));
+      height: calc(285 / 375 * (100vw - 13px));
       // background: url(../images/mv_history@2x.jpg);
       background-position: 50% 50%;
       background-size: cover;
+      margin-bottom: 3rem;
 
       @include mq() {
-        max-height: 500px;
+        height: calc(285 / 832 * 100vw);
+        max-height: 320px;
         padding: 0 0 0 6.5rem;
+      }    
+      @include mq(lg) {
+        height: calc(530 / 1920 * 100vw);
+        max-height: 530px;
+        padding: 0 0 0 6.5rem;
+        margin-bottom: 3rem;
       }    
     }
     &--shop {
@@ -97,23 +105,6 @@
       }
     }
   }
-
-  // &__title {
-  //   position: static;
-  //   z-index: 1;
-  //   font-size: 3.6rem ;
-  //   font-family: Roboto;
-  //   color: #fff;
-    
-  //   @include mq() {
-  //     margin-right: 1rem;
-  //     font-size: 4rem;
-  //     color: #fff;
-  //     letter-spacing: 1.2px;
-      
-  //   }
-  // }
-
   
   &__sub-title {
     position: static;
@@ -127,13 +118,6 @@
   }
 }
 
-// .p-mainvisual__layer--history {
-//   @extend .p-mainvisual__layer;
-//   background: url(../images/cheese_mv-pc@2x.jpg);
-//   // background: url(../images/mv_history@2x.jpg);
-//   background-position: 50% 50%;
-//   background-size: cover;      
-// }
 .p-mainvisual__title {
   position: static;
   z-index: 1;
@@ -170,26 +154,13 @@
     }
   }
 }
-// .layer-in{
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   margin: auto;
-// }
-// .layer-bg{
-//   height: 300px;
-// }
-// .layer-in{
-//   width: 300px;
-//   height: 100px;
-// }
-// .layer-txt{
-//   font-size: 2rem;
-// }
 
+.swiper {
+  z-index: -1;
+}
+.swiper-wrapper {
+  @include mq(){
+    width: 70vw;
 
-// .p-mainvisual__tittle {
-//   position: absolute;
-// }
+  }
+}

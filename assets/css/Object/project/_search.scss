@@ -1,18 +1,22 @@
+.p-search-form { //formタグに付ける
+  height: 100%;
+}
+
 .p-search-field {
   display: inline-block;
   border: none;
-  width: 75%;
+  height: 100%;
+  width: calc(100% - 40px);
 }
 .p-search__wrapper {
   display: flex;
   align-items: center;
+  height: 100%;
+  height: 100%;
   
   @include mq() {
     justify-content: center;
   }
-  // justify-content: flex-end;
-  // padding: 0px 36px 0 24px;
-  // height: 46px;
 }
 
 .p-search__field-wrapper {
@@ -22,8 +26,10 @@
   padding: 0.4rem 1.2em;
   border: 1px solid #707070;
   font-size: 1.6rem;
-  width: calc(230 / 375 * 100vw);
+  width: calc(230 / 375 * 100vw);//入力フィールドの指定
   min-width: 190px;
   max-width: 696px;
   margin-right: 12px;
+  height: 100%;
 }
+
