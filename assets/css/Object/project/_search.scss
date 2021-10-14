@@ -1,35 +1,43 @@
-.p-search-form { //formタグに付ける
-  height: 100%;
+.p-search-form {
+  @include mq() {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .p-search-field {
   display: inline-block;
-  border: none;
-  height: 100%;
-  width: calc(100% - 40px);
+  height: 46px;
+  padding: 0 1rem 0 4rem;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  min-width: 190px;
+  max-width: 396px;
+  width: calc(230 / 375 * 100vw); //入力フィールドの指定
+  border: 1px solid #707070;
+  margin-right: 12px;
+  @include mq(md){
+    width: calc(350 / 1920 * 100vw);//入力フィールドの指定
+  }
+  @include mq(xl){
+    width: calc(396 / 1920 * 100vw);//入力フィールドの指定
+  }
 }
+
 .p-search__wrapper {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  height: 100%;
-  
+  position: relative;
   @include mq() {
     justify-content: center;
   }
 }
 
-.p-search__field-wrapper {
-  display: inline-block;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 0.4rem 1.2em;
-  border: 1px solid #707070;
-  font-size: 1.6rem;
-  width: calc(230 / 375 * 100vw);//入力フィールドの指定
-  min-width: 190px;
-  max-width: 696px;
-  margin-right: 12px;
-  height: 100%;
+.p-search-icon {
+  height: 46px;
+  position: absolute;
+  left: 1rem; /*アイコン左右の位置調整*/
+  top: 7px;
+  background: none;
+  color: #707070;
+  border: none;
+  font-size: 24px; /*アイコンサイズ*/
 }
-
