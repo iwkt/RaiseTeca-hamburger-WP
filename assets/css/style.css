@@ -1097,7 +1097,13 @@ div.wp-block-button > a.wp-block-button__link.has-text-color.has-background {
 
 .p-page-nation {
   display: block;
-  margin-bottom: 1rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 600px) {
+  .p-page-nation {
+    padding-bottom: 0;
+  }
 }
 
 .p-page-nation__text, .p-page-nation__text--pre, .p-page-nation__text--next {

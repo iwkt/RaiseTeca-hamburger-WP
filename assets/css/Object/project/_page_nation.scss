@@ -1,6 +1,9 @@
 .p-page-nation {
   display: block;
-  margin-bottom: 1rem;
+  padding-bottom: 3rem;
+  @include mq(){
+    padding-bottom: 0;
+  }
   &__text {
     font-size: 1.6rem;
     color: #707070 !important;
