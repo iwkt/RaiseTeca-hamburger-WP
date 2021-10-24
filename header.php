@@ -6,6 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="twitter:card" content="summary_large_image" />
+  <!--①-->
+  <meta name="twitter:site" content="@miku_nosuke" />
+  <!--②-->
+  <meta property="og:url" content="https://hamburger.miku-nosuke.com/" />
+  <!--③-->
+  <meta property="og:title" content="RaiseTech Hamburger" />
+  <!--④-->
+  <meta property="og:description" content="RaiseTech　WordPress副業コース2021年の課題制作。本来静的な課題であったが自分の好奇心から躍動感のあるページを作成。期間内に課題クリアしました。" />
+  <!--⑤-->
+  <meta property="og:image" content="https://hamburger.miku-nosuke.com/wp-content/themes/hamburger/screenshot.png" />
+  <!--⑥-->
+
   <?php wp_head(); ?>
 </head>
 
